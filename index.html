@@ -1320,12 +1320,6 @@
         map.addLayer(layer_nat_win_10);
         function pop_simple_boundary_AUS_11(feature, layer) {
             var popupContent = '<table>\
-			<thead color="white"; height="30px"; bgcolor="#34696d"; style="font-size:18px; font-family:맑은 고딕; ">\
-			        <tr align=center>\
-			        <td colspan="2" style="color:white; font-size:25; border-top-right-radius:10px; border-top-left-radius:10px;" >' + (feature.properties['선거구'] !== null ? autolinker.link(feature.properties['선거구'].toLocaleString()) : '') + '</td>\
-					</tr>\
-					</thead>\
-					<tbody>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['STE_CODE21'] !== null ? autolinker.link(feature.properties['STE_CODE21'].toLocaleString()) : '') + '</td>\
                     </tr>\
@@ -1382,16 +1376,7 @@
         bounds_group.addLayer(layer_simple_boundary_AUS_11);
         map.addLayer(layer_simple_boundary_AUS_11);
         setBounds();
-        resetLabels([layer_alp_win_1]);
-        map.on("zoomend", function(){
-            resetLabels([layer_alp_win_1]);
-        });
-        map.on("layeradd", function(){
-            resetLabels([layer_alp_win_1]);
-        });
-        map.on("layerremove", function(){
-            resetLabels([layer_alp_win_1]);
-        });
         </script>
     </body>
 </html>
+
